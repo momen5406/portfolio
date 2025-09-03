@@ -1,6 +1,10 @@
 import React from "react";
 
-const Skills = ({ skills }) => {
+interface SkillsProps {
+  skills: string[];
+}
+
+const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <ul className="flex items-center gap-5 mt-2">
       {skills.map((skill: string, index: number) => (
