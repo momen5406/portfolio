@@ -24,3 +24,11 @@ body {
 .container {
   @apply max-w-6xl mx-auto;
 }
+
+.glowable-text {
+  color: black;
+}
+
+[glow] .glowable-text {
+  color: var(--glow-color);
+}

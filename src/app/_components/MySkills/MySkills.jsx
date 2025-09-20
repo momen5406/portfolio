@@ -15,7 +15,7 @@ const MySkills = () => {
             key={index}
             className="bg-surface-primary border border-white/10 rounded-lg h-[100px] flex items-center justify-center text-5xl"
           >
-            <i class={`fa-brands fa-${skill}`}></i>
+            <i className={`fa-brands fa-${skill}`}></i>
           </div>
         ))}
       </div>

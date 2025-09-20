@@ -1,17 +1,17 @@
 import React from "react";
 import ironPulse from "../../../../public/projects/ironpulse.png";
 import brainify from "../../../../public/projects/brainify.png";
+import cornerstone from "../../../../public/projects/cornerstone.png";
 import Image from "next/image";
 
 const Projects = () => {
   const projects = [
     {
-      screenshot: ironPulse,
-      name: "IronPulse - Landing Page",
-      description:
-        "About IronPulse Gym Landing Page — A modern, responsive landing page for IronPulse Gym built with a bold dark theme and vibrant orange accents. Highlights gym features, membership plans, real member transformations, and a contact form for inquiries. Perfect for showcasing fitness brand identity and web design skills.",
-      frameworks: ["html", "tailwind"],
-      link: "https://iron-pulse-landing-page.vercel.app/",
+      screenshot: cornerstone,
+      name: "CornerStone - Ecommerce Shop",
+      description: "CornerStone eCommerce is a modern eCommerce web application built with Next.js 15, TypeScript, and Tailwind CSS. It features secure authentication with NextAuth.js, shopping cart, wishlist, address management, and order tracking. The platform ensures responsive design, smooth user experience, and protected routes for logged-in users.",
+      frameworks: ["nextjs", 'typescript', "tailwind"],
+      link: "https://cornerstone-ecommerce-app.vercel.app//",
     },
 
     {
