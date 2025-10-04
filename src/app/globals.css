@@ -1,11 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0F0B1E;
-  --foreground: #a596d2;
-  --white: #E2E8F0;
-  --surface-primary: #17142A;
-  --surface-secondary: #391856;
+  --background: #0D0F12;
+  /* Deep charcoal black */
+  --foreground: #A7B3C2;
+  /* Muted gray-blue for text */
+  --white: #F8FAFC;
+  /* Clean white for highlights */
+  --surface-primary: #15181D;
+  /* Dark gray surface */
+  --surface-secondary: #1F2329;
+  /* Slightly lighter surface */
+
+  /* Accents */
+  --accent-orange: #F39C6B;
+  /* Warm vibrant orange */
+  --accent-pink: #FF6F91;
+  /* Fresh pink for contrast */
+  --accent-blue: #3DA9FC;
+  /* Cool electric blue */
+  --accent-gold: #FFD166;
+  /* Golden highlight */
 }
 
 @theme inline {
@@ -13,7 +28,13 @@
   --color-foreground: var(--foreground);
   --color-white: var(--white);
   --color-surface-primary: var(--surface-primary);
-  --color-surface-secondary: var(--surface-secondary)
+  --color-surface-secondary: var(--surface-secondary);
+
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-gold: var(--accent-gold);
+
 }
 
 body {

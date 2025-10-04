@@ -8,13 +8,15 @@ import Footer from "./_components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div className="grid lg:grid-cols-2">
-      <section className="py-[100px] catalogue flex flex-col lg:gap-0 gap-5 lg:justify-between lg:h-screen lg:sticky top-0 lg:px-0 px-5">
+    <div className="grid lg:grid-cols-2 gap-x-12">
+      {/* Left Sticky Column */}
+      <section className="py-[100px] catalogue flex flex-col gap-10 lg:justify-between lg:h-screen lg:sticky top-0 px-5 lg:px-0">
         <Headline />
         <SocialMedia />
       </section>
 
-      <div className="content lg:py-[100px] pb-[100px]">
+      {/* Right Content */}
+      <div className="content lg:py-[100px] pb-[100px] lg:px-0 max-w-3xl space-y-32">
         <About />
         <Projects />
         <MySkills />
