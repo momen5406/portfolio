@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mo’men Hussein - Front-End Developer
 
-## Getting Started
+A passionate and detail-oriented front-end developer dedicated to building clean, responsive, and user-focused web applications. I specialize in turning designs into pixel-perfect, high-performance interfaces, with a strong focus on speed, accessibility, and creating a great user experience. I am currently seeking opportunities to join a team where I can contribute to building polished, scalable products. When I’m not coding, I enjoy exploring design trends and learning about new web technologies.
 
-First, run the development server:
+## Skills
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Languages:** HTML, CSS, JavaScript, TypeScript
+- **Frameworks/Libraries:** React, Next.js
+- **Styling:** Tailwind CSS
+- **Version Control:** Git, GitHub
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Projects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here are a couple of my featured projects. You can find more of my work on my portfolio website.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Spotify Clone
 
-## Learn More
+A web application that mimics the core functionality of Spotify. This project allows users to authenticate, browse playlists, play music, add songs to favorites, and control playback.
 
-To learn more about Next.js, take a look at the following resources:
+- **Technologies:** Next.js, TypeScript, Tailwind CSS, Supabase
+- **Live Demo:** [https://spotify-clone-momen.vercel.app/](https://spotify-clone-momen.vercel.app/)
+- **Source Code:** [Github Repo](https://github.com/momen5406/spotify-clone)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. CornerStone - Ecommerce Shop
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A modern eCommerce web application. It features secure authentication with NextAuth.js, a shopping cart, a wishlist, address management, and order tracking. The platform ensures a responsive design, a smooth user experience, and protected routes for logged-in users.
 
-## Deploy on Vercel
+- **Technologies:** Next.js, TypeScript, Tailwind CSS
+- **Live Demo:** [https://cornerstone-ecommerce-app.vercel.app/](https://cornerstone-ecommerce-app.vercel.app/)
+- **Source Code:** [Github Repo](https://github.com/momen5406/cornerstone-ecommerce-app)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I'm always open to connecting and discussing new opportunities.
+
+- **Email:** [morenocoder@gmail.com](mailto:morenocoder@gmail.com)
+- **LinkedIn:** [https://www.linkedin.com/in/momen5406/](https://www.linkedin.com/in/momen5406/)
+- **Portfolio:** [https://momenhussein.vercel.app/](https://momenhussein.vercel.app/)
