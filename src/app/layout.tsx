@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Momen Hussein",
   description: "Front End Developer",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
   },
 };
 
