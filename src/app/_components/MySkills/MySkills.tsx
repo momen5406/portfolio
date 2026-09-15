@@ -1,71 +1,35 @@
-import React from "react";
-import {
-  FaCss3Alt,
-  FaGitAlt,
-  FaGithub,
-  FaHtml5,
-  FaReact,
-} from "react-icons/fa";
-import {
-  SiJavascript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+const marqueeItems = [
+  "React", "Next.js", "TypeScript", "Node.js",
+  "Django", "PostgreSQL", "AWS", "NestJS",
+  "Tailwind CSS", "GSAP", "REST APIs", "Docker",
+];
 
 const MySkills = () => {
-  const mySkills = [
-    { Icon: FaHtml5, label: "html" },
-    { Icon: FaCss3Alt, label: "css" },
-    { Icon: SiJavascript, label: "javascript" },
-    { Icon: SiTypescript, label: "typescript" },
-    { Icon: FaReact, label: "react" },
-    { Icon: SiNextdotjs, label: "next.js" },
-    { Icon: SiTailwindcss, label: "tailwindcss" },
-    { Icon: FaGitAlt, label: "git" },
-    { Icon: FaGithub, label: "github" },
-  ];
-
   return (
-    <section className="px-5">
-      {/* Intro Text */}
-      <p className="mb-10 text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-        I specialize in building{" "}
-        <span className="text-white font-semibold">
-          modern front-end applications
-        </span>{" "}
-        that balance{" "}
-        <span className="text-accent-orange font-medium">performance</span> with{" "}
-        <span className="text-accent-pink font-medium">
-          delightful user experience
+    <section id="skills" className="py-20 md:py-24">
+
+      {/* Section label */}
+      <div className="container flex items-center gap-3 mb-12">
+        <span className="block w-8 h-px bg-primary" />
+        <span className="font-inter text-xs font-semibold tracking-[0.3em] uppercase text-primary">
+          Skills
         </span>
-        .
-      </p>
-
-      {/* Skills Grid */}
-      <div className="grid sm:grid-cols-3 grid-cols-2 gap-6">
-        {mySkills.map((skill, index) => (
-          <div
-            key={index}
-            className="group bg-surface-primary border border-white/10 rounded-2xl h-[120px] 
-                   flex flex-col items-center justify-center text-5xl 
-                   hover:scale-105 hover:shadow-[0_0_20px_rgba(61,169,252,0.15)] 
-                   hover:border-accent-blue/60 transition-all duration-300 relative"
-          >
-            {/* Icon */}
-            <skill.Icon className="group-hover:text-accent-blue transition-colors duration-300" />
-
-            {/* Tooltip / Label */}
-            <span
-              className="absolute bottom-3 text-xs text-gray-400 opacity-0 
-                         group-hover:opacity-100 group-hover:translate-y-1 
-                         transition-all duration-300"
-            >
-              {skill.label}
-            </span>
-          </div>
-        ))}
       </div>
+
+      {/* Marquee strip */}
+      <div className="overflow-hidden border-y border-black/10 py-6 select-none">
+        <div className="flex gap-10 animate-marquee whitespace-nowrap">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className="flex items-center gap-10">
+              <span className="font-bebas text-xl tracking-widest text-black/30">
+                {item}
+              </span>
+              <span className="text-primary font-bold text-sm">·</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 };

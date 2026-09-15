@@ -1,90 +1,130 @@
 import React from "react";
 import cornerstone from "../../../../public/projects/cornerstone.png";
 import spotify from "../../../../public/projects/spotify.png";
+import brainify from "../../../../public/projects/brainify.png";
 import Image from "next/image";
 
+const projects = [
+  {
+    screenshot: spotify,
+    name: "Spotify Clone",
+    description:
+      "A web application that mimics the core functionality of Spotify, built with Next.js and Supabase. Users can authenticate, browse playlists, play music, add songs to favourites, and control playback.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
+    link: "https://spotify-clone-momen.vercel.app/",
+  },
+  {
+    screenshot: cornerstone,
+    name: "CornerStone",
+    description:
+      "A modern e-commerce platform built with Next.js 15. Features secure auth, shopping cart, wishlist, address management, and order tracking — all with a responsive, polished UI.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://cornerstone-ecommerce-app.vercel.app/",
+  },
+  {
+    screenshot: brainify,
+    name: "Brainify",
+    description:
+      "An AI-powered learning tool that turns any topic into a structured quiz. Generates questions on the fly, tracks your score, and adapts to your knowledge gaps.",
+    tags: ["React", "OpenAI", "Node.js"],
+    link: "https://momen5406.github.io/Brainify-Quiz-App/",
+  },
+];
+
 const Projects = () => {
-  const projects = [
-    {
-      screenshot: spotify,
-      name: "Spotify Clone",
-      description:
-        "About A web application that mimics the core functionality of Spotify, built with NextJS and Supabase. This project allows users to authenticate, browse playlists, play music, add songs to favorites, and control playback, offering a familiar user experience similar to the popular music streaming service.",
-      frameworks: ["nextjs", "typescript", "tailwind", "supabase"],
-      link: "https://spotify-clone-momen.vercel.app/",
-    },
-    {
-      screenshot: cornerstone,
-      name: "CornerStone - Ecommerce Shop",
-      description:
-        "CornerStone eCommerce is a modern eCommerce web application built with Next.js 15, TypeScript, and Tailwind CSS. It features secure authentication with NextAuth.js, shopping cart, wishlist, address management, and order tracking. The platform ensures responsive design, smooth user experience, and protected routes for logged-in users.",
-      frameworks: ["nextjs", "typescript", "tailwind"],
-      link: "https://cornerstone-ecommerce-app.vercel.app/",
-    },
-  ];
-
   return (
-    <section>
-      <ul className="flex flex-col gap-10">
-        {projects.map((project, index) => (
-          <li key={index}>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group grid items-start gap-5 bg-surface-primary/30 hover:bg-surface-primary p-6 rounded-2xl 
-                     border border-background hover:border-accent-blue/50 hover:shadow-[0_0_25px_rgba(61,169,252,0.15)] 
-                     transition-all duration-300"
-            >
-              {/* Project Screenshot */}
-              <div className="w-full border border-white/10 rounded-xl overflow-hidden relative">
-                <Image
-                  className="w-full h-56 object-cover group-hover:scale-105 group-hover:rotate-[0.5deg] transition duration-500"
-                  width={500}
-                  height={300}
-                  src={project.screenshot}
-                  alt={project.name}
-                />
-                {/* Subtle gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
-              </div>
+    <section id="projects" className="container pt-12 pb-20 md:pt-16 md:pb-28">
 
-              {/* Project Content */}
-              <div>
-                <h5 className="text-white font-semibold text-lg tracking-wide group-hover:text-accent-orange transition">
+      {/* Section label */}
+      <div className="flex items-center gap-3 mb-16">
+        <span className="block w-8 h-px bg-primary" />
+        <span className="font-inter text-xs font-semibold tracking-[0.3em] uppercase text-primary">
+          Projects
+        </span>
+      </div>
+
+      {/* 3-column grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {projects.map((project, i) => (
+          <a
+            key={i}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-off-white border border-black/10 flex flex-col overflow-hidden group hover:border-primary transition-colors duration-300"
+          >
+            {/* Screenshot */}
+            <div className="overflow-hidden border-b border-black/10 group-hover:border-primary transition-colors duration-300">
+              <Image
+                src={project.screenshot}
+                alt={project.name}
+                width={400}
+                height={220}
+                className="w-full h-48 object-cover group-hover:scale-[1.03] transition duration-500"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-7 flex flex-col justify-between gap-6 flex-1">
+              <div className="flex flex-col gap-3">
+                <h3 className="font-bebas text-2xl md:text-3xl tracking-wide text-black leading-none">
                   {project.name}
-                </h5>
-                <p className="text-sm text-foreground/80 leading-relaxed line-clamp-3 my-3">
+                </h3>
+                <p className="font-inter text-xs text-black/50 leading-relaxed">
                   {project.description}
                 </p>
-
-                {/* Framework Tags */}
-                <ul className="flex flex-wrap items-center gap-2 mt-3">
-                  {project.frameworks.map((framework, i) => (
-                    <li
-                      key={i}
-                      className="bg-surface-secondary text-white/90 text-sm py-1 px-3 rounded-full border border-transparent 
-                             hover:border-accent-pink/50 hover:text-accent-pink transition duration-300"
-                    >
-                      {framework}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </a>
-          </li>
-        ))}
-      </ul>
 
-      {/* CTA Link */}
-      <a
-        href="#"
-        className="group px-6 text-white font-semibold mt-12 inline-flex items-center gap-2 text-base 
-               hover:text-accent-gold transition duration-300"
-      >
-        View Full Project Archive
-        <i className="fa-solid fa-arrow-right text-sm transform group-hover:translate-x-2 group-hover:text-accent-gold transition duration-300"></i>
-      </a>
+              <div className="flex items-end justify-between gap-2">
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-inter text-[10px] font-semibold tracking-widest uppercase text-black/30 group-hover:text-primary transition-colors duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <span className="font-inter text-[10px] text-black/30 shrink-0 flex items-center gap-1 group-hover:text-primary transition-colors duration-300">
+                  View
+                  <svg
+                    className="w-2.5 h-2.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="square" strokeLinejoin="miter" d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-12">
+        <a
+          href="https://github.com/momen5406"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-inter text-sm font-semibold tracking-wider uppercase border border-black text-black px-6 py-3 hover:bg-black hover:text-off-white transition-colors duration-200 inline-flex items-center gap-2 group"
+        >
+          View all on GitHub
+          <svg
+            className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="square" strokeLinejoin="miter" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
     </section>
   );
 };
